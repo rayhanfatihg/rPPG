@@ -2,6 +2,12 @@
 
 Proyek ini mengimplementasikan sistem remote Photoplethysmography (rPPG) waktu nyata menggunakan webcam. Sistem ini mendeteksi wajah, mengekstrak sinyal warna dari area kulit (pipi dan dahi), dan menggunakan algoritma POS (Plane-Orthogonal-to-Skin) untuk mengestimasi detak jantung (BPM).
 
+## Pembeda dari demo di kelas
+- Menggunakan area spesifik seperti pipi dan jidat untuk mengurangi noise dengan menggunakan mediapipe untuk trackingnya
+- Menggunakan metode POS yang lebih robust
+- Menggunakan filter lowcut = 0.7 dan highcut = 4.0 dengan fs adaptif
+- Menambah visualisasi Real-time signal plotting, Frequency Spectrum, dan BPM display.
+
 ## Fitur
 
 - **Deteksi Wajah**: Menggunakan MediaPipe Face Mesh.
@@ -39,3 +45,5 @@ Proyek ini mengimplementasikan sistem remote Photoplethysmography (rPPG) waktu n
 - `rPPG.ipynb`: Kode utama program (Jupyter Notebook).
 - `requirements.txt`: Daftar library yang dibutuhkan.
 - `README.md`: Dokumentasi proyek.
+
+
